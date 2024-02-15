@@ -42,6 +42,7 @@ Some points on this list might have improved by now! (Probably not...)
 * Azure: ARM: Versioning (like `Microsoft.Storage/storageAccounts@2022-09-01`) is only useful if it is actually used. For some dumb reason, `allowBlobPublicAccess` changed from default `true` to `false` some point. Normal "update" deployments are unaffected but deployments in a new environment suddenly fail for no reason. ???
 * Azure: Support: is beyond useless. They do not understand any problem you have. Even if you provide a deplyoed sample app, sample code, step-by-step reproducer, step-by-step video with spoken clarificatios, ...
 * Azure: Nitpick: They say that one should not use access keys to share stuff from blob storage. That generally make sense for the default keys (why does that evene exist?) but you need it if you generate short-lived download urls. Also, there is not much choice when using Functions either, because you somehow need it to access the code.
+* Azure: Functions: Timed trigger only work when the function loads them. It is somehow possible (for a new deployment) that the function new code is not loaded, therefore it does not know the timed trigger and never does something. Klicking on it in the portal however, loads the function and makes the trigger start working.
 
 Typical conversation in forum:
 https://learn.microsoft.com/en-us/answers/questions/583467/automate-azure-app-registration-client-secret-rota
