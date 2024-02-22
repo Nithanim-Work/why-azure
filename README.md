@@ -6,9 +6,9 @@ List items are prefixed with the name specific offering it applies to.
 Some points on this list might have improved by now! (Probably not...)
 
 
-* ARM: Code upload for functions not automatic. Needs do be done afterwards manually and then function restarted.
+* ARM: Code upload for functions not automatic. Needs do be done afterwards manually and then function restarted. Which makes it buggy sometimes because the second restart is more or less ignored by the first one triggered by ARM.
 * ARM: Deleting removed resources only possible by using one Resource Group for each template (so it can be fully managed by ARM).
-* ARM: Role assignments for deleted resources are not deleted, resulting in deployment fails because of already existing role assignments. (Somwhere I read that they will be cleaned upt *at some point* but that does not seem to be true since I still see one that is orphaned maaaany months ago.)
+* ARM: Role assignments for deleted resources are not deleted, resulting in deployment fails because of already existing role assignments. (Somwhere I read that they will be cleaned upt *at some point* but that does not seem to be true since I still see one that is orphaned maaaany months ago. edit: years ago)
 * ARM: DNS TTL only possible for all records of subdomain, not individually per record.
 * PowerApps (PA): Connectors not updated automatically in apps after modifying them.
 * ARM: No good way for automatic function certificates for custom domain names. (https://github.com/Azure/bicep/discussions/5006, https://github.com/Azure/bicep/tree/v0.5.6/docs/examples/301/function-app-with-custom-domain-managed-certificate)
